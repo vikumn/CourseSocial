@@ -16,6 +16,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 import android.widget.TextView;
 
 public class Feedback extends FragmentActivity {
@@ -95,7 +97,7 @@ public class Feedback extends FragmentActivity {
     /**
      * A dummy fragment representing a section of the app, but that simply displays dummy text.
      */
-    public static class DummySectionFragment extends Fragment {
+    public class DummySectionFragment extends Fragment {
         public DummySectionFragment() {
         }
 
@@ -104,11 +106,25 @@ public class Feedback extends FragmentActivity {
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                 Bundle savedInstanceState) {
+        	
+        	 
+        	
+        	
+        	ListView listView = new ListView(getActivity());
+        	FeedbackListItemAdapter feedbacklist = new FeedbackListItemAdapter(inflater);
+        	listView.setAdapter(feedbacklist);
+        	return listView;
+        	
+        	
+        	/*
             TextView textView = new TextView(getActivity());
             textView.setGravity(Gravity.CENTER);
             Bundle args = getArguments();
             textView.setText(Integer.toString(args.getInt(ARG_SECTION_NUMBER)));
-            return textView;
+            return textView;*/
+        	//return inflater.inflate(R.layout.feedback_course_list, container);
+        	
+        	
         }
     }
 }

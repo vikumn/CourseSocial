@@ -2,23 +2,24 @@ package com.courses.coursesocial;
 
 
 import android.app.Activity;
+import android.app.Fragment;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 public class SimpleFeedbackAdapter extends BaseAdapter{
-	 	private Activity activity;
+	 	private Fragment fragment;
 	 	private static LayoutInflater inflater=null;
 	 	private String[] data;
 	    
-	    public SimpleFeedbackAdapter(Activity a, String[] d) {
-	        activity = a;
+	    public SimpleFeedbackAdapter(String[] d, LayoutInflater inflater) {
+	        //fragment = a;
 	        data=d;
-	        inflater = (LayoutInflater)activity.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+	        //this.inflater = (LayoutInflater)fragment.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+	        this.inflater = inflater;
 	        
 	    }
 	 

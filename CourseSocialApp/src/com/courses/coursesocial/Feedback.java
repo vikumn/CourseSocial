@@ -1,24 +1,16 @@
 package com.courses.coursesocial;
 
-import android.app.ActionBar;
-import android.app.FragmentTransaction;
-import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.app.NavUtils;
 import android.support.v4.view.ViewPager;
-import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.TextView;
 
 public class Feedback extends FragmentActivity {
 
@@ -102,18 +94,25 @@ public class Feedback extends FragmentActivity {
         }
 
         public static final String ARG_SECTION_NUMBER = "section_number";
+        ListView list;
+    	SimpleFeedbackAdapter adapter;
 
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                 Bundle savedInstanceState) {
         	
-        	 
-        	
-        	
-        	ListView listView = new ListView(getActivity());
-        	FeedbackListItemAdapter feedbacklist = new FeedbackListItemAdapter(inflater);
-        	listView.setAdapter(feedbacklist);
-        	return listView;
+        	//super.onCreate(savedInstanceState);
+        	View view = inflater.inflate(R.layout.feedback_course, container,false);     	
+    		
+    		
+    		
+    		list = (ListView) view.findViewById(R.id.list);
+    		String[] data = {"Vikas", "Kumar"};
+    		adapter = new SimpleFeedbackAdapter(data, inflater);
+    		list.setAdapter(adapter);
+    		
+    		return view;
+    		
         	
         	
         	/*

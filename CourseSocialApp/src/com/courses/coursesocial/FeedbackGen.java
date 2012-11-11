@@ -19,7 +19,7 @@ public class FeedbackGen extends Activity {
 		
 		list = (ListView) findViewById(R.id.list);
 		String[] data = {"Vikas", "Kumar"};
-		adapter = new SimpleFeedbackAdapter(this, data);
+		//adapter = new SimpleFeedbackAdapter(this, data);
 		list.setAdapter(adapter);
 		
 	}

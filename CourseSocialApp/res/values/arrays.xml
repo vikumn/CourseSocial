@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="departments">
+        <item >Computer Science CSCI</item>
+        <item >Computer Engineering CMPI</item>
+        <item >Electrical Engineering EE</item>
+        <item >Mechanical Engineering ME</item>
+    </string-array>
+    
+     <string-array name="csci">
+        <item >CSCI-1901</item>
+        <item >CSCI-1902</item>
+        <item >CSCI-1903</item>
+        <item >CSCI-1904</item>
+         <item >CSCI-1901</item>
+        <item >CSCI-1902</item>
+        <item >CSCI-1903</item>
+        <item >CSCI-1904</item>
+         <item >CSCI-1901</item>
+        <item >CSCI-1902</item>
+        <item >CSCI-1903</item>
+        <item >CSCI-1904</item>
+    </string-array>
+    
+     <string-array name="cmpi">
+        <item >CMPI-1901</item>
+        <item >CMPI-1902</item>
+        <item >CMPI-1903</item>
+        <item >CMPI-1904</item>
+    </string-array>
+    
+     <string-array name="ee">
+        <item >EE-1901</item>
+        <item >EE-1902</item>
+        <item >EE-1903</item>
+        <item >EE-1904</item>
+    </string-array>
+    
+     <string-array name="me">
+        <item >ME-1901</item>
+        <item >ME-1902</item>
+        <item >ME-1903</item>
+        <item >ME-1904</item>
+    </string-array>
+    
+     <string-array name="none">
+        <item >NONE-1901</item>
+        <item >NONE-1902</item>
+        <item >NONE-1903</item>
+        <item >NONE-1904</item>
+    </string-array>
+    
+</resources>

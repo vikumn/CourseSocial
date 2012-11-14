@@ -1,5 +1,9 @@
 package com.courses.coursesocial;
 
+import com.courses.coursesocial.CoursesListDialog.CourseDialogListener;
+
+import android.app.DialogFragment;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
@@ -8,11 +12,12 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
 
-public class Feedback extends FragmentActivity {
+public class Feedback extends FragmentActivity implements CourseDialogListener{
 
     /**
      * The {@link android.support.v4.view.PagerAdapter} that will provide fragments for each of the
@@ -26,6 +31,7 @@ public class Feedback extends FragmentActivity {
      * The {@link ViewPager} that will host the section contents.
      */
     ViewPager mViewPager;
+    String pageTitle;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -36,18 +42,30 @@ public class Feedback extends FragmentActivity {
         mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
 
 
-        // Set up the ViewPager with the sections adapter.
+        // Set up the ViewPager with the sections adapter.      
         mViewPager = (ViewPager) findViewById(R.id.pager);
         mViewPager.setAdapter(mSectionsPagerAdapter);
 
-    }
+    }    
+    
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.activity_feedback, menu);
         return true;
     }
-
+    
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item){
+    	switch(item.getItemId()) {
+    	case R.id.menu_select_courses:
+    		DialogFragment dialog = new SelectCourseDialog();    		
+    		dialog.show(getFragmentManager(), "SelectCoursesDialog");
+    		
+    	}
+    	return true;
+    }
+    
     
 
 
@@ -101,20 +119,31 @@ public class Feedback extends FragmentActivity {
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                 Bundle savedInstanceState) {
         	
-        	//super.onCreate(savedInstanceState);
-        	View view = inflater.inflate(R.layout.feedback_course, container,false);     	
-    		
-    		
-    		
-    		list = (ListView) view.findViewById(R.id.list);
-    		String[] data = {"Vikas", "Kumar"};
+        	
+        	Bundle args = getArguments();
+        	int position = args.getInt(ARG_SECTION_NUMBER);
+        	View view = inflater.inflate(R.layout.feedback_course, container,false);
+        	String[] data = null;
+        	if (position==1) {
+        		//Course
+        		String[] courseData = {"Coverage", "Flexibility", "Relevance", "Comprehensibility", "Exam", "Grading"};
+        		data = courseData;
+        	}
+        	else if(position ==2) {
+        		String[] profData = {"Coverage", "Knowledge"};
+        		data = profData;
+        	}
+        	else {
+        		String[] TAdata = {"Helpful", "Knowledge Depth", "Respect students", "Tough"};
+        		data = TAdata;
+        	}
+        	
+    		list = (ListView) view.findViewById(R.id.list);    		
     		adapter = new SimpleFeedbackAdapter(data, inflater);
     		list.setAdapter(adapter);
     		
     		return view;
-    		
-        	
-        	
+    		        	
         	/*
             TextView textView = new TextView(getActivity());
             textView.setGravity(Gravity.CENTER);
@@ -126,4 +155,16 @@ public class Feedback extends FragmentActivity {
         	
         }
     }
+
+	public void onDialogPositiveClick(DialogFragment dialog) {
+		//CHANGE THE FEEDBACK TITLE
+		CharSequence title = "Feedback:CS";
+		setTitle(title);
+		
+	}
+
+	public void onDialogNegativeClick(DialogFragment dialog) {
+		//DO NOTHING
+		
+	}
 }

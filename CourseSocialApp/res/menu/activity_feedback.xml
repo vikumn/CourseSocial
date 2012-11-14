@@ -3,4 +3,9 @@
         android:title="@string/menu_settings"
         android:orderInCategory="100"
         android:showAsAction="collapseActionView" />
+    <item android:id="@+id/menu_select_courses"
+        android:title="@string/select_courses"
+        android:orderInCategory="100"
+        android:showAsAction="collapseActionView" />
+    <item android:id="@+id/submit_feedback" android:visible="true" android:showAsAction="always" android:title="Submit Feedback" android:icon= "@drawable/ic_action_name1" android:enabled="true"></item>
 </menu>

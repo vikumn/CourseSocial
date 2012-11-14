@@ -19,8 +19,9 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity> 
-        <!-- <activity
+        </activity>
+        <!--
+        <activity
             android:name=".FeedbackTab"
             android:label="@string/title_activity_feedback_tab" >
             <intent-filter>
@@ -28,8 +29,10 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity> -->
-		<!-- <activity
+        </activity>
+        -->
+        <!--
+        <activity
             android:name=".FeedbackGen"
             android:label="@string/title_activity_feedback_tab" >
             <intent-filter>
@@ -37,10 +40,28 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity> -->
-		        
-        
-        
+        </activity>
+        -->
+        <!--
+        <activity
+            android:name=".UnivList"
+            android:label="@string/title_activity_univ_list" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        -->
+        <activity
+            android:name=".SelectCourseDialog"
+            android:label="@string/title_activity_select_course_dialog" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

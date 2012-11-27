@@ -11,6 +11,13 @@ import android.os.Bundle;
 
 public class SelectCourseDialog extends DialogFragment{
 	
+	int department = 0;
+	
+	public SelectCourseDialog(int department) {
+		this.department = department;
+	}
+	
+	
 	/*public interface DepartmentDialogListener {
 		public void onDep_dialogPositiveClick(DialogFragment dialog);
 		public void onDep_dialogNegativeClick(DialogFragment dialog);
@@ -37,6 +44,7 @@ public class SelectCourseDialog extends DialogFragment{
 	  AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
 	  
 	  builder.setTitle(R.string.select_department);
+	  
 	  builder.setItems(R.array.departments, new DialogInterface.OnClickListener() {
 		
 		public void onClick(DialogInterface dialog, int which) {

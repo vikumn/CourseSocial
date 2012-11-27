@@ -1,0 +1,75 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="false"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:id="@+id/LinearLayout2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="2dp" >
+
+        <TextView
+            android:id="@+id/courseName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_weight="1"
+            android:text="name"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <RatingBar
+            android:id="@+id/ratingBar1"
+            style="@style/feedbackShownBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:numStars="3"
+            android:rating="2"
+            android:stepSize="0.5" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/LinearLayout2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.62"
+        android:orientation="vertical"
+        android:paddingLeft="10dp" >
+
+        <RatingBar
+            android:id="@+id/rtbProductRating"
+            style="@style/feedbackRatingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:indeterminate="false"
+            android:indeterminateBehavior="cycle"
+            android:isIndicator="true"
+            android:numStars="5"
+            android:rating="3.5"
+            android:stepSize="0.5" />
+
+        <TextView
+            android:id="@+id/recText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_weight="1"
+            android:text="Recommended"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/imageButton1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:background="@drawable/ic_rndbutton_green"
+        android:cropToPadding="true"
+        android:scaleType="fitEnd" />
+
+</LinearLayout>

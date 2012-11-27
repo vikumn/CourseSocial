@@ -14,5 +14,13 @@
     <string name="ok">OK</string>
     <string name="cancel">Cancel</string>
     <string name="title_activity_select_course_dialog">SelectCourseDialog</string>
+    <string name="title_activity_suggested_courses">SuggestedCourses</string>
+    <string name="title_activity_home_page">HomePage</string>
+    <string name="grads">Graduate Courses</string>
+    <string name="ugrads">Undergrad Courses</string>
+    <string name="mliked">Most Liked</string>
+    <string name="sortbn">Sory by Number</string>
+    <string name="filter">Filter</string>
+    <string name="title_activity_filter_courses_dialog">Filter</string>
 
 </resources>

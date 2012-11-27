@@ -1,0 +1,138 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <LinearLayout  xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LinearLayout2"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+	    <TextView
+	        android:id="@+id/location"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="left"
+	        android:paddingLeft="6dp"
+	        android:text="Location"
+	        android:textColor="#ffffffff"
+	        android:textSize="@dimen/location_size" />
+	    
+		<LinearLayout
+		    xmlns:tools="http://schemas.android.com/tools"
+		    android:id="@+id/LinearLayout3"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:orientation="horizontal"
+		    android:paddingLeft="8dp" >
+
+	    <ToggleButton
+	        android:id="@+id/ebank"
+	        android:layout_width="100dp"
+	        android:layout_height="wrap_content"
+	        android:onClick="setButton"
+	        android:text="East Bank"
+	        android:textOff="East Bank"
+	        android:textOn="East Bank" />
+
+	    <ToggleButton
+	        android:id="@+id/wbank"
+	        android:layout_width="100dp"
+	        android:layout_height="wrap_content"
+	        android:text="West Bank"
+	        android:textOff="West Bank"
+	        android:textOn="West Bank" />
+
+	      <ToggleButton
+	          android:id="@+id/spaul"
+	          android:layout_width="100dp"
+	          android:layout_height="wrap_content"
+	          android:text="St. Paul"
+	          android:textOff="St. Paul"
+	          android:textOn="St. Paul" />
+
+	    </LinearLayout>
+	    
+		 <TextView
+		     android:id="@+id/time"
+		     android:layout_width="wrap_content"
+		     android:layout_height="wrap_content"
+		     android:layout_gravity="left"
+		     android:paddingLeft="6dp"
+		     android:paddingTop="4dp"
+		     android:shadowDx="0.5"
+		     android:shadowDy="0.6"
+		     android:shadowRadius="1"
+		     android:text="Time"
+		     android:textColor="#ffffffff"
+		     android:textSize="@dimen/location_size" />
+		 
+		 <LinearLayout
+		     xmlns:tools="http://schemas.android.com/tools"
+		     android:id="@+id/LinearLayout3"
+		     android:layout_width="fill_parent"
+		     android:layout_height="wrap_content"
+		     android:orientation="horizontal"
+		     android:paddingLeft="8dp"
+		     android:paddingRight="4dp" >
+
+	    <ToggleButton
+	        android:id="@+id/mon"
+	        android:layout_width="58dp"
+	        android:layout_height="wrap_content"
+	        android:gravity="center"
+	        android:text="M"
+	        android:textOff="M"
+	        android:textOn="M" />
+
+	     <ToggleButton
+	         android:id="@+id/tue"
+	         android:layout_width="58dp"
+	         android:layout_height="wrap_content"
+	         android:text="Tu"
+	         android:textOff="Tu"
+	         android:textOn="Tu" />
+
+	      <ToggleButton
+	          android:id="@+id/wed"
+	          android:layout_width="58dp"
+	          android:layout_height="wrap_content"	         
+	          android:text="W"
+	          android:textOff="Wed"
+	          android:textOn="Wed" />
+
+	      <ToggleButton
+	          android:id="@+id/thur"
+	          android:layout_width="58dp"
+	          android:layout_height="wrap_content"
+	          android:text="Th"
+	          android:textOff="Th"
+	          android:textOn="Th" />
+
+	      <ToggleButton
+	          android:id="@+id/fri"
+	          android:layout_width="58dp"
+	          android:layout_height="wrap_content"
+	          android:onClick="setButton"
+	          android:text="F"
+	          android:textOff="F"
+	          android:textOn="F" />
+
+	    </LinearLayout>
+		
+		
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/feedbackFilterView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+    </ListView>
+
+</LinearLayout>

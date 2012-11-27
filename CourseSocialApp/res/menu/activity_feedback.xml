@@ -7,5 +7,17 @@
         android:title="@string/select_courses"
         android:orderInCategory="100"
         android:showAsAction="collapseActionView" />
-    <item android:id="@+id/submit_feedback" android:visible="true" android:showAsAction="always" android:title="Submit Feedback" android:icon= "@drawable/ic_action_name1" android:enabled="true"></item>
+    <item android:id="@+id/submit_feedback" 
+        android:visible="true" 
+        android:showAsAction="always" 
+        android:title="Submit Feedback" 
+        android:icon= "@drawable/ic_action_name1" 
+        android:enabled="true" />
+    
+    <item android:id="@+id/menu_reset"        
+        android:showAsAction="always|collapseActionView" 
+        android:title="Reset" 
+        android:icon= "@drawable/ic_refresh" 
+        android:enabled="true" />
+   
 </menu>

@@ -59,9 +59,11 @@ public class Feedback extends FragmentActivity implements CourseDialogListener{
     public boolean onOptionsItemSelected(MenuItem item){
     	switch(item.getItemId()) {
     	case R.id.menu_select_courses:
-    		DialogFragment dialog = new SelectCourseDialog();    		
+    		DialogFragment dialog = new SelectCourseDialog(0);    		
     		dialog.show(getFragmentManager(), "SelectCoursesDialog");
     		
+    	case R.id.menu_reset:
+    		//Reset the data given in feedback    		
     	}
     	return true;
     }
@@ -156,9 +158,9 @@ public class Feedback extends FragmentActivity implements CourseDialogListener{
         }
     }
 
-	public void onDialogPositiveClick(DialogFragment dialog) {
+	public void onDialogPositiveClick(DialogFragment dialog, String courseName, int courseId) {
 		//CHANGE THE FEEDBACK TITLE
-		CharSequence title = "Feedback:CS";
+		CharSequence title = "Feedback:" + courseName;
 		setTitle(title);
 		
 	}

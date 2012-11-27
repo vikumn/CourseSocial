@@ -5,19 +5,21 @@ import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.DialogFragment;
 import android.content.DialogInterface;
+import android.content.res.Resources;
 import android.os.Bundle;
 
 public class CoursesListDialog extends DialogFragment {
 	
 	int department = -1;
 	int courseSelected = -1;
+	String courseName = null;
 	
 	public CoursesListDialog(int department) {
 		this.department = department;
 	}
 	
 	public interface CourseDialogListener {
-		public void onDialogPositiveClick(DialogFragment dialog);
+		public void onDialogPositiveClick(DialogFragment dialog, String courseName, int courseId);
 		public void onDialogNegativeClick(DialogFragment dialog);
 	}
 	
@@ -64,10 +66,13 @@ public class CoursesListDialog extends DialogFragment {
 		  resId = R.array.none;
 	  }
 	  
+	  final int rId = resId;
+	  
 	  builder.setSingleChoiceItems(resId, 0, new DialogInterface.OnClickListener() {
 		
 		public void onClick(DialogInterface dialog, int which) {
 			courseSelected = which;
+			courseName = getCourseName(rId, which);
 			
 		}
 	})
@@ -75,15 +80,24 @@ public class CoursesListDialog extends DialogFragment {
 	  
 	  .setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
           public void onClick(DialogInterface dialog, int id) {
-        	  dListener.onDialogPositiveClick(CoursesListDialog.this);
+        	  dListener.onDialogPositiveClick(CoursesListDialog.this, courseName, courseSelected);
           }
       })
       .setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
           public void onClick(DialogInterface dialog, int id) {
               dListener.onDialogNegativeClick(CoursesListDialog.this);
+              DialogFragment df = new SelectCourseDialog(department);
+              df.show(getFragmentManager(), "SelectCourseDialog");
           }
       });
 	  // Create the AlertDialog object and return it
 	  return builder.create();
   }
+  
+  private String getCourseName(int resId, int position){
+	  String[] courseArrays = getResources().getStringArray(resId);	  
+	  return courseArrays[position];  
+	  
+  }
+  
 }

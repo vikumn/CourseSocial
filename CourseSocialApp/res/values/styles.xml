@@ -2,10 +2,20 @@
 
     <style name="AppTheme" parent="android:Theme.Light" />
     
-    <style name="feedbackRatingBar" parent="@android:style/Widget.RatingBar">
+    <style name="feedbackShownBar" parent="@android:style/Widget.RatingBar">
         <item name="android:progressDrawable">@drawable/ratingbars</item>
         <item name="android:minHeight">22dip</item>
         <item name="android:maxHeight">22dip</item>
     </style>
+    
+     <style name="feedbackRatingBar" parent="@android:style/Widget.RatingBar">
+        <item name="android:progressDrawable">@drawable/ratingstars</item>
+        <item name="android:minHeight">22dip</item>
+        <item name="android:maxHeight">22dip</item>
+    </style>
+    
+    <style parent="@android:style/Widget.ProgressBar" name="customProgressBar">
+    	<item name="android:indeterminateDrawable">@drawable/ic_bar</item>
+	</style>
 
 </resources>

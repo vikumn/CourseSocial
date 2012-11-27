@@ -11,6 +11,8 @@
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
+
+        <!--
         <activity
             android:name=".Feedback"
             android:label="@string/title_activity_feedback" >
@@ -20,6 +22,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        -->
         <!--
         <activity
             android:name=".FeedbackTab"
@@ -29,7 +32,7 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
+        </activity>
         -->
         <!--
         <activity
@@ -40,7 +43,7 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
+        </activity>
         -->
         <!--
         <activity
@@ -51,8 +54,9 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
+        </activity>
         -->
+        <!--
         <activity
             android:name=".SelectCourseDialog"
             android:label="@string/title_activity_select_course_dialog" >
@@ -60,6 +64,27 @@
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        -->
+
+        <activity
+            android:name=".SuggestedCourses"
+            android:label="@string/title_activity_suggested_courses" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".FilterCoursesDialog"
+            android:label="@string/title_activity_filter_courses_dialog"
+            android:theme = "@android:style/Theme.Holo.Dialog" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <!-- <category android:name="android.intent.category.LAUNCHER" />-->
             </intent-filter>
         </activity>
     </application>

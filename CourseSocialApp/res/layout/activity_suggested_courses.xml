@@ -1,0 +1,26 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LinearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:overScrollMode="always" >
+
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:divider="#991e90ff"
+        android:dividerHeight="4dp"
+        android:layout_weight="1" />
+
+    <EditText
+        android:id="@+id/searchView"
+        android:layout_width="fill_parent"
+        android:layout_height="50sp"
+        android:hint="Search Courses"
+        android:inputType="textVisiblePassword" />
+
+   
+
+</LinearLayout>
